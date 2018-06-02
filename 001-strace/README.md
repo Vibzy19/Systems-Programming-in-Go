@@ -66,6 +66,10 @@ The attributes of a process. We enable tracing of child processes by setting the
 	*/
 ```
 
+## Notes
+
+We first execute the command and set the stdin, stdout, stderr on it. After that we allow Ptrace to work on the command by changing the ProcessAttributes. After that we start the program and put a breakpoint by making it wat or by giving a SIGSTOP signal. At this moment we can read their process registers. The registers contain information on the syscall executing at that particular moment. the eax/rax register contains the number of the syscall which is running.
+
 ## Progress
 
 * Returns syscall numbers in order of execution.
