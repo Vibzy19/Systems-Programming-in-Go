@@ -1,6 +1,4 @@
-# Strace utility wrtten in Go
-
-===== 
+# strace(!)
 
 ### Introduction to Syscalls
 
