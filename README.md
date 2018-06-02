@@ -18,16 +18,16 @@
 
 ### 1> Strace
 
-#### Introduction to Syscalls
+(Introduction from manpage)
+In the simplest case strace runs the specified command until it exits. It  intercepts and records the system calls which are called by a process and the signals which are received by a process. The name of each system call, its arguments and its return value are printed on standard error or to the file specified with the -o option.
 
-Syscalls allow the User Space Programs to talk to the Kernel Space and perform the necessary operations related to handling the resources with which we can get the right output back to the User Space. (basic def)
-[Golang UK Conference 2017 | Liz Rice - The Beginner's Guide to Linux Syscalls](https://www.youtube.com/watch?v=BdfNrs_oeko)
 
 ### 2> Debugger
-### 3> Packet Capture Tool [GopherCon 2016: John Leon - Packet Capture, Analysis, and Injection with Go](https://www.youtube.com/watch?v=APDnbmTKjgM)
-### 4> Client/Server : Unix Socket
-### 5> Client/Server : TCP
-### 6> Client/Server : RPC
-### 7> Wall of Sheep [DEF CON 23 - Packet Hacking Village - Tools And Techniques Used At The Wall of Sheep](https://www.youtube.com/watch?v=o_OoUv_HPls)
-### 8> Go on BareMetal [Bare Metal Gophers](https://github.com/achilleasa/bare-metal-gophers)
-### 9> [CliveOS](http://lsub.org/export/clivesys.pdf)
+### 3> Raw Sockets [Using Raw Sockets in Go](https://css.bz/2016/12/08/go-raw-sockets.html)
+### 4> Packet Capture Tool [GopherCon 2016: John Leon - Packet Capture, Analysis, and Injection with Go](https://www.youtube.com/watch?v=APDnbmTKjgM)
+### 5> Client/Server : Unix Socket
+### 6> Client/Server : TCP
+### 7> Client/Server : RPC
+### 8> Wall of Sheep [DEF CON 23 - Packet Hacking Village - Tools And Techniques Used At The Wall of Sheep](https://www.youtube.com/watch?v=o_OoUv_HPls)
+### 9> Go on BareMetal [Bare Metal Gophers](https://github.com/achilleasa/bare-metal-gophers)
+### 10> [CliveOS](http://lsub.org/export/clivesys.pdf)
