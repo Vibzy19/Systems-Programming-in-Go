@@ -1,4 +1,4 @@
-# strace(!)
+# strace(1)
 
 ### Introduction to Syscalls
 
