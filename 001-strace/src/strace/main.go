@@ -81,7 +81,6 @@ func trace(cmd *exec.Cmd) {
 		syscall.Wait4(PID, nil, 0, nil) //wait for the process to change state
 		exit = !exit
 	}
-
 }
 
 func printexit(ex bool) string {
