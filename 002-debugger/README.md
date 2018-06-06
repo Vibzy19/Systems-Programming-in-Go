@@ -2,6 +2,8 @@
 
 To understand how a debugger works we would ahve to completely understand how a linux process functions and the states it is found in.
 An application has to be executed so that it turns into a process with states and can be loaded into memory for safe execution, with its own stack space to store its data.
+
+
 ![Fork Diagram](http://www.bogotobogo.com/Linux/images/process/fork_diagram.png)
 
 ###### Ptrace is a kernel hook into the task dispatch logic.
