@@ -27,9 +27,9 @@ func startServerMode(wg *sync.WaitGroup) {
 	handleErr(err)
 	listener, err := net.Listen("unix", "./unixsock")
 	handleErr(err)
-	//wg.Add(1)
-	func(listener net.Listener) {
-		//defer wg.Done()
+	wg.Add(1)
+	go func(listener net.Listener) {
+		defer wg.Done()
 		for { // this is the part where the echo happens
 			conn, err := listener.Accept()
 			handleErr(err)
@@ -39,7 +39,7 @@ func startServerMode(wg *sync.WaitGroup) {
 			//conn.Write(buf[:nr]) // Write back to the connection, hence echo server
 		}
 	}(listener)
-	//wg.Wait()
+	wg.Wait()
 }
 
 func startClientMode(wg *sync.WaitGroup) {
@@ -49,9 +49,9 @@ func startClientMode(wg *sync.WaitGroup) {
 	conn, err := net.Dial("unix", "./unixsock")
 	handleErr(err)
 
-	//wg.Add(1)
-	func(conn net.Conn) {
-		//defer wg.Done()
+	wg.Add(1)
+	go func(conn net.Conn) {
+		defer wg.Done()
 		for {
 			_, err := conn.Write([]byte("YOLLLOOOOOO !"))
 			handleErr(err)
@@ -59,7 +59,7 @@ func startClientMode(wg *sync.WaitGroup) {
 	}(conn)
 
 	defer conn.Close()
-	//wg.Wait()
+	wg.Wait()
 }
 
 func main() {
