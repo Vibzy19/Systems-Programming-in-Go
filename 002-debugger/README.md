@@ -52,5 +52,8 @@ The gosym package allows us to access the symbol table and line number table emb
 
 ## Future Work
 
+* Set breakpoint at the end of an instruction by putting the 0xCC byte in the place of the first byte of the next instruction.
+* Be able to read the number of bytes in the instruction after which we would like to place a breakpoint so that we can take that into consideration and would not have to specify the number of bytes to be able to poke data into the fist byte of the instruction.
+
 ## References
 (1) [Linux Processes and Signals](http://www.bogotobogo.com/Linux/linux_process_and_signals.php)

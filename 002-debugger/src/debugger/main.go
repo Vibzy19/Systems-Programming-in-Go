@@ -16,6 +16,7 @@ import (
 	"os"
 	"os/exec"
 	"syscall"
+	// necessary for information on elf binaries
 )
 
 func main() {
