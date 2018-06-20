@@ -30,9 +30,10 @@ func startServerMode(wg *sync.WaitGroup) {
 	wg.Add(1)
 	go func(listener net.Listener) {
 		defer wg.Done()
+		conn, err := listener.Accept()
+		handleErr(err)
+
 		for { // this is the part where the echo happens
-			conn, err := listener.Accept()
-			handleErr(err)
 			nr, err := conn.Read(buf) // Read from the connection to buf
 			fmt.Printf("\n Got -> %v", string(buf[:nr]))
 			handleErr(err)
